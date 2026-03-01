@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<!-- saved from url=(0082)file:///C:/Users/86147/Desktop/qinjia/%E7%A7%BB%E5%8A%A8%E5%AD%A6%E5%B7%A53.html#/ -->
+<html data-scale="true" style="font-size: 48.5333px;" class="">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>请假管理</title>
+  <link rel="stylesheet" href="./index_files/umi.5f4797e3.css">
+  <link rel="stylesheet" href="./index_files/vendors.31ecd969.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.2a42e354.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.a2e6a083.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.5a7e23ef.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.323d67b2.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.678f84af.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.cfbf0a2e.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/vendors.21833f8f.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/layouts__userLayout.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/layouts__tabBarLayout.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/layouts__basicLayout.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/p__user__login.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/p__tabbar__homePage__index.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/p__tabbar__affairs__index.5f4797e3.chunk.css">
+  <link rel="stylesheet" href="./index_files/p__sm-holiday__student__details2__index.5f4797e3.chunk.css">
+  <style>
+    .app-hidden {
+      display: none !important;
+    }
+    .login-panel {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #f0f4ff 0%, #fdf6ff 100%);
+      padding: 32px 16px;
+    }
+    .login-card {
+      width: 100%;
+      max-width: 440px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+      padding: 28px 24px;
+    }
+    .login-title {
+      font-size: 22px;
+      font-weight: 600;
+      color: #1f2a44;
+      margin: 0 0 8px;
+    }
+    .login-subtitle {
+      margin: 0 0 20px;
+      color: #5b6474;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .login-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .login-field label {
+      font-size: 14px;
+      color: #334155;
+    }
+    .login-field input {
+      padding: 10px 12px;
+      border: 1px solid #d9dbe1;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .login-field input:focus {
+      border-color: #165dff;
+      box-shadow: 0 0 0 3px rgba(22, 93, 255, 0.15);
+    }
+    .login-cta {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      background: linear-gradient(90deg, #165dff, #4f8bff);
+      color: #ffffff;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .login-cta:hover {
+      opacity: 0.95;
+    }
+    .login-error {
+      color: #d4380d;
+      min-height: 20px;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    .login-hints {
+      background: #f7f9fd;
+      border: 1px dashed #d0d7ed;
+      border-radius: 12px;
+      padding: 12px;
+      margin-top: 16px;
+      color: #4b5563;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .login-hints strong {
+      color: #1f2a44;
+    }
+    .active-account-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #eef4ff;
+      color: #1d4ed8;
+      padding: 6px 10px;
+      border-radius: 12px;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    @media (max-width: 520px) {
+      .login-panel {
+        padding: 20px 12px;
+        align-items: flex-start;
+      }
+      .login-card {
+        padding: 22px 18px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      }
+      .login-title {
+        font-size: 20px;
+      }
+      .login-subtitle {
+        font-size: 13px;
+        line-height: 1.35;
+      }
+      .login-field input {
+        font-size: 15px;
+        padding: 9px 10px;
+      }
+      .login-cta {
+        font-size: 15px;
+        padding: 11px;
+      }
+    }
+  </style>
+  <script>
+    if ('addEventListener' in document) {
+      document.addEventListener(
+        'DOMContentLoaded',
+        function () {
+          if (typeof FastClick !== 'undefined') {
+            FastClick.attach(document.body);
+          }
+        },
+        false
+      );
+    }
+    if (!window.Promise) {
+      document.writeln('<script src="//as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"><\\/script>');
+    }
+  </script>
+</head>
+<body>
+	<!-- 添加SVG符号定义 -->
+  <svg style="display: none;">
+    <symbol id="right" viewBox="0 0 1024 1024">
+      <path d="M765.7 486.8L314.9 134.7c-5.3-4.1-12.9-0.4-12.9 6.3v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1c16.4-12.8 16.4-37.6 0-50.4z"/>
+    </symbol>
+  </svg>
+  <div id="login-panel" class="login-panel">
+    <div class="login-card">
+      <h1 class="login-title">账号登录</h1>
+      <p class="login-subtitle">输入账号和密码，登录后申请人姓名会自动匹配到当前账号。</p>
+      <form id="login-form">
+        <div class="login-field">
+          <label for="login-account">账号</label>
+          <input id="login-account" name="account" type="text" placeholder="例如：student01" required>
+        </div>
+        <div class="login-field">
+          <label for="login-password">密码</label>
+          <input id="login-password" name="password" type="password" placeholder="输入密码" required>
+        </div>
+        <button type="submit" class="login-cta">登录</button>
+        <div id="login-error" class="login-error"></div>
+      </form>
+    </div>
+  </div>
+  <div id="root" class="app-hidden">
+	  <div class="page_basic_layout___233lr">
+		  <div class="page_basic_position_container___3Lkcg">
+			  <div class="page_basic_position_fixed___1BROP">
+			  <div class="page_basic_position_item___31NO8">
+				  <img
+					   src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAu9JREFUWEfVlm9oTWEcx7+/h/2TnXOvmiEJIaklrOZSUhS38II2L7xY2fLKXhBitbuzsxohXvBqISkvEC82NYqS4rGySSsJIS2zrdx77sS2y/PT2Wzhnnvvee6m5XlzT/d5vt/vp9/5nd85hCleNMX5+L8AltRwXlEwvpOZdwii1Qye61aQQD2KuZOIWvqjxq0352jIb2V9V2B9xNmjwE0AFmQw/yBAtY9s86ofiIwAa/ZxTu7cgfNgtc+P4fgZEs3DPYX7O5opkU6XESAUiV8AVJVW+PhhcVHaRnXWAKFIvApQF7ILH1OJamkbF1N5pKzA+iP9hSo/5zWA4okBoFcMJpY+Olk04OWTEiBkxfdCKU9yAp6ToNocDD10TRPI28CKmxhY6QkrRJW0jEt6ABGnBeDtHqL7w5/ehDuaS/9orpFmneO0AdiUrKFWaZs7NAFibwEsShIxr5aNwWdeZqG66CoQdXrsvZN2YLEuwDcA+X+LAlEzvy3FoAnXcF4s6Ax6BA1KO1CgCeD0AVw0ORWgfmmbs/UA6p1WMG+blB4gvi0bgl79lPpltDYSrSTQ5RTUmk8BVUrLvKJXgQNcgELnPQDP0mnMhj4MmAvlWXJ7KmmlHcUhK34ISp3SCEs+KsRhaRmntSehK1hhcW6A413MvCwbCCJ6FSOj5IVFw1kBuKKQ5WyFYnfA6C9BYWmZd9IJM74NRyDqY9fAqNAiIFyXDYHdmTT+ACxnFpTqAmheJsPRff4IIUqkZX7OdN4XwEgVIs4WMLe5319pTRkMorC0zbuZwt193wCjtyJ+HKyOpjUmcUI2GMf8hGsDlJfztO7lzj0QNnoGMB7Mf2luvnGDfvwTANe0rPZLMU1PPCXQ/N9DGNzN33NK25tm9voN167AmHFZXWyNILgfIzN+/fdVMTa0NwY6dMKzBnCF6yKxXQq47l4LoOKxHbipGz4hAFe8ti5+0P190micySZ8wgDZhv6u03oMJyPwb48pB/gJPRgJMPDa2JsAAAAASUVORK5CYII=" style="width: 16px; height: 16px;">
+				  <span class="undefined first___q8L32">首页</span>
+				  <svg class="am-icon am-icon-right am-icon-md" color="#cccccc" viewBox="0 0 1024 1024" style="width: 18px; height: 23px;">
+  <path d="M765.7 486.8L314.9 134.7c-5.3-4.1-12.9-0.4-12.9 6.3v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1c16.4-12.8 16.4-37.6 0-50.4z" fill="#cccccc"/>
+</svg>
+			  </div>
+			  <div class="page_basic_position_item___31NO8">
+			  <span class="undefined ">请假管理</span>
+			  </div>
+			  </div>
+		  </div>
+		  <div class="transitionWrapper___LPf4r">
+			  <div style="position: absolute; width: 100%; height: 100%;" class="">
+				  <div style="margin-bottom: 90px;">
+				  <div class="titleBox___JiRXx">
+					  <div>
+						  <div class="avatar___kub4U"><img src="./index_files/getStudentPhoto" alt=""></div>
+  						  <div class="info___z_Lvm">
+  							  <div class="title___2B62j">
+  								  <img class="icon___2hoOs" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAMAAADXqc3KAAABBVBMVEUAAAAA//8AgP8Aqv8AgP8Amf8rgP8gn/8amf8Xi/8Vlf8RiP8Ykv8Vlf8Uj/8cjv8bkv8ajf8akf8Xk/8Vjv8bjf8Ykv8Xjv8bj/8akv8Yjv8Wkf8aj/8akf8Zkv8ZkP8Yj/8XkP8Xkf8ZkP8Zj/8Zkf8YkP8Xj/8Zkf8XkP8Ykf8Ykf8YkP8ZkP8Xkf8ZkP8XkP8YkP8YkP8Xj/8YkP8XkP8YkP8YkP8YkP8YkP8YkP8YkP8XkP8YkP8YkP8Ykf8YkP8YkP8YkP8Yj/8YkP8YkP8XkP8YkP8YkP8YkP8XkP8Ykf8YkP8YkP8YkP8YkP8YkP8YkP8YkP8YkP8YkP8YkP8YkP9us06oAAAAVnRSTlMAAQIDBAUGCAoLDA8VGBkbHB0eISQmKi0wMTY6OzxGR0lOT1NbXV5kZm50dnd8hIeOlZaZn6O8vb7DysvP1NfZ3N3f4OHj5Ojs7u/w8fL09fb3+Pn8/riutKkAAADfSURBVBgZpcHpOgJhAIbhV5hS2SZL1rKTLVsZUWOXEinP+R+Kmb5pMP64Lvet/9qoXXuucoqq0XOuqDN6HEUNLbh4HIVik9kxSYkSPkeBqZMn4O7QLgEVcGSsv2F0geIylNWziaf90MFXlHVUXpIv8w7uqqXk9jM0EwqdgpuWb7YBBfVZLcjLKMCl+qahHpNhQ9dSYBGqCgwAKQVm4GVYRgY66htswJqMfagodAz3tnzzr7Cj0HgTHrdSGt1rwU1cX1a6eNp4Wll9l69j3M7pp/RBFT4udpP6bWQirj/5BCOYOCBx2OKPAAAAAElFTkSuQmCC" alt="">
+  							  </div>
+  							  <div class="class___3KDBS">|</div>
+  						  </div>
+  					  </div>
+  				  </div>
+  				  <div class="am-whitespace am-whitespace-md"></div>
+  				  <div class="detialBox___1X_BF">
+  					  <div class="Headertitle___2h9Hi">请假信息</div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">请假类型：</div>
+						  <span class="value___XOCYG">事假</span>
+					  </div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">请假去向：</div>&nbsp;
+				  </div>
+				  <div class="detialLine___3dSsI">
+					  <div class="title___2B62j">详细地址：</div>
+					  &nbsp;
+					  </div>
+					  <div class="detialLine___3dSsI">
+				  <div class="title___2B62j">开始时间：</div>
+				  <span class="value___XOCYG" id="start-time">2025-10-20 07:00:00</span>
+				  </div>
+					  <div class="detialLine___3dSsI">
+				  <div class="title___2B62j">结束时间：</div>
+				  <span class="value___XOCYG" id="end-time">2025-10-21 07:00:00</span>
+				  </div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">统计时长：</div>
+						  <span class="value___XOCYG" id="duration-text">天小时分钟&nbsp;</span></div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">紧急联系人：</div>
+					  </div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">紧急联系人电话：</div>
+					  <span class="value___XOCYG">&nbsp;</span>
+					  </div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">请假理由：</div>
+						  <span class="value___XOCYG">回家</span>
+					  </div>
+					  <div class="detialLine___3dSsI">
+						  <div class="title___2B62j">请假状态：</div>
+					  <span class="value_2___2Pirt">审核通过</span>
+					  </div>
+					  <div class="detialLine___3dSsI">
+					  <div class="title___2B62j">销假状态：</div>&nbsp;
+	  </div>
+					  <div class="detialLineImg___26VH8">
+	  <div class="title___2B62j">请假附件：</div>
+						  <span class="value___XOCYG">
+						  <div class="NHUpload">
+	  <div class="uploadedItem"></div>
+						  </div>
+						  </span>
+					  </div>
+					  <img class="imgType___15G4R" src="./index_files/icon_pass.89bc2387.png" alt="">
+					  </div>
+					  <div class="am-whitespace am-whitespace-md"></div>
+					 <div class="container___2I1fm">
+  <div class="am-whitespace am-whitespace-md"></div>
+  <div class="header___BDU7V">
+    <div class="header_title___Rg5Zq">办理进度</div>
+  </div>
+  <div class="am-steps am-steps-vertical am-steps-small">
+    <!-- 申请步骤 -->
+    <div class="am-steps-item am-steps-item-finish am-steps-item-custom">
+      <div class="am-steps-item-tail"></div>
+      <div class="am-steps-item-icon">
+        <span class="am-steps-icon" style="
+          background-color: white; 
+          border: 1px solid #1890ff;
+          border-radius: 50%; 
+          width: 0.36rem; 
+          height: 0.36rem; 
+          display: flex; 
+          align-items: center; 
+          justify-content: center;
+          position: relative;
+        ">
+          <!-- 蓝色对勾图标 -->
+          <svg width="0.3rem" height="0.3rem" viewBox="0 0 14 14" fill="none" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <path d="M3.5 7L5.5 9L10.5 4" stroke="#1890ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+      <div class="am-steps-item-content">
+        <div class="am-steps-item-title">
+          <div class="step_header___2nUJN">
+            <div class="step_title___3yKU2">
+              申请
+              <span style="color: rgb(50, 223, 114);margin-left: 8px;font-weight: 550;">申请</span>
+            </div>
+            <div class="step_time___1Qq-E" id="apply-time">2025-10-18 19:01</div>
+          </div>
+        </div>
+        <div class="am-steps-item-description">
+          <div class="content___2vXvj">
+            <div class="text_content___12qib">
+              <div class="grayText___1PS9X" id="applicant-name">未登录</div>
+              <div class="statusText___2Hktr"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 辅导员审核步骤 -->
+    <div class="am-steps-item am-steps-item-finish am-steps-item-custom">
+      <div class="am-steps-item-tail"></div>
+      <div class="am-steps-item-icon">
+        <span class="am-steps-icon" style="
+          background-color: white; 
+          border: 1px solid #1890ff;
+          border-radius: 50%; 
+          width: 0.36rem; 
+          height: 0.36rem; 
+          display: flex; 
+          align-items: center; 
+          justify-content: center;
+          position: relative;
+        ">
+          <!-- 蓝色对勾图标 -->
+          <svg width="0.3rem" height="0.3rem" viewBox="0 0 14 14" fill="none" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+            <path d="M3.5 7L5.5 9L10.5 4" stroke="#1890ff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+      </div>
+      <div class="am-steps-item-content">
+        <div class="am-steps-item-title">
+          <div class="step_header___2nUJN">
+            <div class="step_title___3yKU2">
+              辅导员审核
+              <span style="color: rgb(50, 223, 114); margin-left: 8px; font-weight:550;">审核通过</span>
+            </div>
+            <div class="step_time___1Qq-E" id="review-time">2025-10-19 15:55</div>
+          </div>
+        </div>
+        <div class="am-steps-item-description">
+          <div class="content___2vXvj">
+            <div class="text_content___12qib">
+              <div class="grayText___1PS9X">古宇婷</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 结束步骤（保持原样） -->
+    <div class="am-steps-item am-steps-item-process am-steps-item-custom">
+      <div class="am-steps-item-tail"></div>
+      <div class="am-steps-item-icon">
+        <span class="am-steps-icon">
+          <div class="last_step___4mg46">
+            <span></span>
+          </div>
+        </span>
+      </div>
+      <div class="am-steps-item-content">
+        <div class="am-steps-item-title">
+          <div class="step_header___2nUJN">
+            <div class="step_title___3yKU2">结束</div>
+            <div class="step_time___1Qq-E"></div>
+          </div>
+        </div>
+        <div class="am-steps-item-description">
+          <div class="content___2vXvj">
+            <div class="text_content___12qib">
+              <div class="grayText___1PS9X"></div>
+              <div class="statusText___2Hktr"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+				  <div class="am-whitespace am-whitespace-md"></div>
+				  <div class="am-whitespace am-whitespace-md"></div>
+				  <div class="am-whitespace am-whitespace-md"></div>
+				  <div class="am-whitespace am-whitespace-md"></div>
+  <script>
+    (function () {
+      function pad(value) {
+        return value < 10 ? '0' + value : String(value);
+      }
+
+      function formatDateTime(date, includeSeconds) {
+        if (!(date instanceof Date) || isNaN(date.getTime())) {
+          return '';
+        }
+        var formatted =
+          date.getFullYear() +
+          '-' +
+          pad(date.getMonth() + 1) +
+          '-' +
+          pad(date.getDate()) +
+          ' ' +
+          pad(date.getHours()) +
+          ':' +
+          pad(date.getMinutes());
+        if (includeSeconds) {
+          formatted += ':' + pad(date.getSeconds());
+        }
+        return formatted;
+      }
+
+      function hasSeconds(text) {
+        if (!text) {
+          return false;
+        }
+        var parts = text.trim().split(/\s+/);
+        if (parts.length < 2) {
+          return false;
+        }
+        return parts[1].split(':').length === 3;
+      }
+
+      function parseTime(text) {
+        if (!text) {
+          return null;
+        }
+        var parts = text.trim().split(/\s+/);
+        if (parts.length < 2) {
+          return null;
+        }
+        var dateParts = parts[0].split('-');
+        if (dateParts.length !== 3) {
+          return null;
+        }
+        var timeParts = parts[1].split(':');
+        if (timeParts.length === 2) {
+          timeParts.push('00');
+        }
+        if (timeParts.length !== 3) {
+          return null;
+        }
+        var year = parseInt(dateParts[0], 10);
+        var month = parseInt(dateParts[1], 10) - 1;
+        var day = parseInt(dateParts[2], 10);
+        var hour = parseInt(timeParts[0], 10);
+        var minute = parseInt(timeParts[1], 10);
+        var second = parseInt(timeParts[2], 10);
+        if (
+          [year, month, day, hour, minute, second].some(function (value) {
+            return Number.isNaN(value);
+          })
+        ) {
+          return null;
+        }
+        return new Date(year, month, day, hour, minute, second, 0);
+      }
+
+      function parseDurationToMs(text) {
+        if (!text) {
+          return null;
+        }
+        var totalMinutes = 0;
+        var matched = false;
+        var dayMatch = text.match(/(\d+)\s*天/);
+        if (dayMatch) {
+          totalMinutes += parseInt(dayMatch[1], 10) * 24 * 60;
+          matched = true;
+        }
+        var hourMatch = text.match(/(\d+)\s*小?时/);
+        if (hourMatch) {
+          totalMinutes += parseInt(hourMatch[1], 10) * 60;
+          matched = true;
+        }
+        var minuteMatch = text.match(/(\d+)\s*分/);
+        if (minuteMatch) {
+          totalMinutes += parseInt(minuteMatch[1], 10);
+          matched = true;
+        }
+        if (!matched) {
+          return null;
+        }
+        return totalMinutes * 60 * 1000;
+      }
+
+      function formatDuration(durationMs) {
+        if (typeof durationMs !== 'number' || !isFinite(durationMs) || durationMs < 0) {
+          return '';
+        }
+        var totalMinutes = Math.round(durationMs / 60000);
+        var minutesPerDay = 24 * 60;
+        var days = Math.floor(totalMinutes / minutesPerDay);
+        var hours = Math.floor((totalMinutes % minutesPerDay) / 60);
+        var minutes = totalMinutes % 60;
+        var parts = [];
+        if (days) {
+          parts.push(days + '天');
+        }
+        if (hours) {
+          parts.push(hours + '小时');
+        }
+        if (minutes || parts.length === 0) {
+          parts.push(minutes + '分钟');
+        }
+        return parts.join('');
+      }
+
+      document.addEventListener('DOMContentLoaded', function () {
+        var startNode = document.getElementById('start-time');
+        var endNode = document.getElementById('end-time');
+        if (!startNode || !endNode) {
+          return;
+        }
+        var durationNode = document.getElementById('duration-text');
+        var applyNode = document.getElementById('apply-time');
+        var reviewNode = document.getElementById('review-time');
+
+        var originalStart = parseTime(startNode.textContent);
+        var originalEnd = parseTime(endNode.textContent);
+        if (!originalStart || !originalEnd) {
+          return;
+        }
+
+        var durationMs = 24 * 60 * 60 * 1000;
+
+        var applyOriginal = applyNode ? parseTime(applyNode.textContent) : null;
+        var reviewOriginal = reviewNode ? parseTime(reviewNode.textContent) : null;
+        var applyHasSeconds = applyNode ? hasSeconds(applyNode.textContent) : false;
+        var reviewHasSeconds = reviewNode ? hasSeconds(reviewNode.textContent) : false;
+
+        var now = new Date();
+        var currentStart = new Date(now.getFullYear(), now.getMonth(), now.getDate(), 7, 0, 0, 0);
+        var currentEnd = new Date(currentStart.getTime() + durationMs);
+
+        startNode.textContent = formatDateTime(currentStart, true);
+        endNode.textContent = formatDateTime(currentEnd, true);
+
+        if (applyNode && applyOriginal) {
+          var applyOffset = originalStart.getTime() - applyOriginal.getTime();
+          var currentApply = new Date(currentStart.getTime() - applyOffset);
+          applyNode.textContent = formatDateTime(currentApply, applyHasSeconds);
+        }
+
+        if (reviewNode && reviewOriginal) {
+          var reviewOffset = originalStart.getTime() - reviewOriginal.getTime();
+          var currentReview = new Date(currentStart.getTime() - reviewOffset);
+          reviewNode.textContent = formatDateTime(currentReview, reviewHasSeconds);
+        }
+
+        //if (durationNode) {
+          //durationNode.textContent = formatDuration(durationMs);
+       // }//计算时间//
+      });
+    })();
+    document.addEventListener('DOMContentLoaded', function () {
+      var CSV_PATH = 'accounts.csv';
+      var DEFAULT_CSV = 'account,password,name';
+      var LEGACY_DEFAULT =
+        'account,password,name\\n' +
+        'student01,123456,陈奕潮\\n' +
+        'student02,654321,王梓宁\\n' +
+        'student03,pass2024,李夏雨';
+
+      var accountsCsv = '';
+      var accounts = {};
+      var accountsReady = false;
+
+      var loginForm = document.getElementById('login-form');
+      var loginPanel = document.getElementById('login-panel');
+      var appContent = document.getElementById('root');
+      var accountInput = document.getElementById('login-account');
+      var passwordInput = document.getElementById('login-password');
+      var applicantNameNode = document.getElementById('applicant-name');
+      var errorNode = document.getElementById('login-error');
+
+      function ensureHeader(csvText) {
+        var trimmed = (csvText || '').trim();
+        if (!trimmed) {
+          return DEFAULT_CSV;
+        }
+        var lines = trimmed.split(/\r?\n/);
+        if (!/^account\s*,\s*password\s*,\s*name/i.test(lines[0])) {
+          lines.unshift('account,password,name');
+        }
+        return lines.join('\n');
+      }
+
+      function normalizeCsvText(text) {
+        var value = String(text || '');
+        value = value.replace(/\r\n?/g, '\n'); // normalize CRLF/CR
+        value = value.replace(/\\n/g, '\n');   // convert escaped \n to real newline if存在
+        return value;
+      }
+
+      function stripSampleAccounts(csvText) {
+        var lines = ensureHeader(csvText).split(/\r?\n/);
+        var header = lines[0];
+        var filtered = [header];
+        var sampleSet = { student01: true, student02: true, student03: true };
+        for (var i = 1; i < lines.length; i++) {
+          var line = lines[i].trim();
+          if (!line) {
+            continue;
+          }
+          var parts = line.split(',');
+          if (sampleSet[parts[0]]) {
+            continue;
+          }
+          filtered.push(line);
+        }
+        return filtered.join('\n');
+      }
+
+      function parseCsvToMap(csvText) {
+        var map = {};
+        var lines = ensureHeader(csvText).split(/\r?\n/);
+        for (var i = 1; i < lines.length; i++) {
+          var line = lines[i].trim();
+          if (!line) {
+            continue;
+          }
+          var parts = line.split(',');
+          if (parts.length < 3) {
+            continue;
+          }
+          var account = parts[0].trim();
+          var password = parts[1].trim();
+          var name = parts.slice(2).join(',').trim();
+          if (account) {
+            map[account] = { password: password, displayName: name || account };
+          }
+        }
+        return map;
+      }
+
+      function applyCsv(csvText) {
+        accountsCsv = ensureHeader(stripSampleAccounts(normalizeCsvText(csvText)));
+        accounts = parseCsvToMap(accountsCsv);
+        accountsReady = true;
+      }
+
+      function fetchCsvFromFile() {
+        return fetch(CSV_PATH + '?_=' + Date.now(), { cache: 'no-store' })
+          .then(function (res) {
+            if (!res.ok) {
+              throw new Error('fetch failed');
+            }
+            return res.text();
+          })
+          .catch(function () {
+            return DEFAULT_CSV;
+          });
+      }
+
+      // 仅从CSV读取账户，不在前端新增/修改
+
+      function setApplicantName(name) {
+        if (applicantNameNode) {
+          applicantNameNode.textContent = name;
+        }
+      }
+
+      function setAccountDisplay() {}
+
+      fetchCsvFromFile().then(function (text) {
+        applyCsv(text);
+      });
+
+      if (loginForm) {
+        loginForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+          if (!accountsReady) {
+            if (errorNode) {
+              errorNode.textContent = '账号数据加载中，请稍后再试。';
+            }
+            return;
+          }
+          var account = accountInput ? accountInput.value.trim() : '';
+          var password = passwordInput ? passwordInput.value : '';
+          var accountInfo = accounts[account];
+
+          if (!accountInfo || accountInfo.password !== password) {
+            if (errorNode) {
+              errorNode.textContent = '账号或密码不正确，请重新输入。';
+            }
+            return;
+          }
+
+          if (errorNode) {
+            errorNode.textContent = '';
+          }
+
+          setApplicantName(accountInfo.displayName);
+          setAccountDisplay(account, accountInfo.displayName);
+
+          if (loginPanel) {
+            loginPanel.classList.add('app-hidden');
+          }
+          if (appContent) {
+            appContent.classList.remove('app-hidden');
+          }
+        });
+      }
+    });
+  </script>
+</body>
+				  </html>
