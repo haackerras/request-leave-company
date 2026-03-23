@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404</title>
+  <style>
+    body{
+      background:#f5f5f5;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      height:100vh;
+      margin:0;
+      font-family:sans-serif;
+    }
+    .code{font-size:80px;font-weight:bold;color:#666;}
+    .msg{font-size:20px;color:#999;}
+
+    /* 右下角隐蔽按钮 */
+    #secret{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:30px;
+      height:30px;
+      opacity:0.1;
+      cursor:pointer;
+      border-radius:999px;
+    }
+    #secret:hover{opacity:0.3;}
+  </style>
+</head>
+<body>
+  <div class="code">404</div>
+  <div class="msg">Page Not Found</div>
+  <div id="secret"></div>
+
+  <script>
+    let count = 0;
+    let timer = null;
+    const timeout = 3000; // 3秒内点两下
+
+    // 这里改成你自己网页的文件名（或直接写网址）
+    const goTo = "index.html";
+
+    document.getElementById("secret").addEventListener("click", () => {
+      count++;
+
+      // 第一次点击：开始计时
+      if (count === 1) {
+        timer = setTimeout(() => {
+          count = 0; // 超时重置
+        }, timeout);
+      }
+
+      // 第二次点击：满足条件就跳转，并清掉计时器
+      if (count >= 2) {
+        clearTimeout(timer);
+        window.location.href = goTo;
+      }
+    });
+  </script>
+</body>
+</html>
